@@ -1,3 +1,76 @@
 body{
     background-color: black;
 }
+
+.extend{
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: solid 3px white;
+    border-radius: 10px;
+    margin : {
+        left: 40%;
+        right: 40%;
+        top: 20%;
+        bottom: auto;
+    }
+
+    padding: {
+        top: 2%;
+        bottom: 2%;
+    }
+
+    
+    
+
+    &:hover{
+        background-color: white;
+        color: black;
+        transition: color .5s;
+        transition: background-color .5s;
+        animation: extend 2s;
+    }
+}
+
+.goRight{
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: solid 3px white;
+    border-radius: 10px;
+    margin : {
+        left: 40%;
+        right: 40%;
+        top: 10%;
+        bottom: auto;
+    }
+
+    padding: {
+        top: 2%;
+        bottom: 2%;
+    }
+
+    &:hover{
+        background-color: white;
+        color: black;
+        animation: right 2s;
+    }
+}
+
+@keyframes extend {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+@keyframes right{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(200px);
+    }
+}
