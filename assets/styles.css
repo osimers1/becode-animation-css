@@ -42,6 +42,59 @@ body {
   animation: right 2s;
 }
 
+.card {
+  padding-top: 10%;
+  position: absolute;
+  left: 33%;
+  border: solid 3px white;
+  overflow: hidden;
+}
+.card img {
+  width: 500px;
+  height: 500px;
+  transition: transform 1s;
+}
+.card .title {
+  position: absolute;
+  bottom: 0;
+  transition: bottom 1s;
+  background-color: white;
+  width: 100%;
+}
+.card .title h1 {
+  color: black;
+}
+.card .title h3 {
+  color: black;
+}
+.card .text {
+  position: absolute;
+  bottom: 0%;
+  height: 0%;
+  color: blue;
+  width: 90%;
+  background-color: white;
+  overflow: hidden;
+  transition: height 1s;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.card .comment {
+  position: absolute;
+  bottom: 0;
+  color: blue;
+}
+.card:hover > .text {
+  height: 20%;
+}
+.card:hover > img {
+  transform: scale(1.5);
+  opacity: 0.6;
+}
+.card:hover > .title {
+  bottom: 20%;
+}
+
 @keyframes extend {
   0% {
     transform: scale(1);

@@ -56,6 +56,71 @@ body{
         animation: right 2s;
     }
 }
+.card{
+    padding-top: 10% ;
+    position: absolute;
+    left: 33%;
+    border: solid 3px white;
+    overflow: hidden; //permet de cacher les bord depassant de l'image 
+    img{
+
+        width: 500px;
+        height: 500px;
+        transition: transform 1s;
+    }
+    .title{
+        position: absolute;
+        bottom: 0;
+        transition: bottom 1s;
+        background-color: white;
+        width: 100%;
+        h1{
+            color: black;
+        }
+        h3{
+            color: black;
+        }
+    }
+    .text{
+        position: absolute;
+        bottom: 0%;
+        height: 0%;
+        color: blue;
+        width: 90%;
+        background-color: white;
+        overflow: hidden;
+        transition: height 1s;
+        padding: {
+            left: 5%;
+            right: 5%;
+        }
+    }
+    .comment{
+        position: absolute;
+        bottom: 0;
+        color: blue;
+    }
+    &:hover{
+        & > .text{
+            height: 20%;
+        }
+        & > img{
+            transform: scale(1.5);
+            opacity: 0.6;
+        }
+        & > .title{
+            bottom: 20%;
+        }
+    }
+    // .comment{
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     position: absolute;
+    //     bottom: -70%;
+    // }
+}
+
 
 @keyframes extend {
     0%{
